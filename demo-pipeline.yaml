@@ -1,0 +1,24 @@
+trigger:
+- main
+
+stages:
+- stage: Build
+  jobs:
+  - job: BuildJob
+    steps:
+    - script: echo "Build stage ejecutado"
+      displayName: 'Build step'
+
+- stage: Test
+  jobs:
+  - job: TestJob
+    steps:
+    - script: echo "Test stage ejecutado"
+      displayName: 'Test step'
+
+- stage: Deploy
+  jobs:
+  - job: DeployJob
+    steps:
+    - script: echo "Deploy stage ejecutado"
+      displayName: 'Deploy step'
